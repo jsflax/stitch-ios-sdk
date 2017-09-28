@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "StitchCore"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.authors		 = "MongoDB"
   s.homepage     = "https://mongodb.com/cloud/stitch"
   s.summary      = "An SDK to use MongoDB's Stitch Core features."
