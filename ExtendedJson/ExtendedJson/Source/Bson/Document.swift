@@ -113,6 +113,10 @@ public struct Document: BSONCollection, Codable, Collection {
     }
 }
 
+extension Document: CustomStringConvertible {
+    public var description: String { return storage.description }
+}
+
 extension Document: ExpressibleByDictionaryLiteral {
     public init(dictionaryLiteral elements: (String, ExtendedJsonRepresentable)...) {
         for (key, value) in elements {

@@ -48,6 +48,12 @@ public class StitchClient: StitchClientType {
     private var authProvider: AuthProvider?
     private var authDelegates = [AuthDelegate?]()
 
+    public var userId: String? {
+        get {
+            return auth?.authInfo.userId
+        }
+    }
+
     /// The currently authenticated user (if authenticated).
     public private(set) var auth: Auth? {
         didSet {
@@ -233,9 +239,9 @@ public class StitchClient: StitchClientType {
     public func login(withProvider provider: AuthProvider) -> StitchTask<UserId> {
         self.authProvider = provider
 
-        if isAuthenticated, let auth = auth {
+        if isAuthenticated, let userId = userId {
             printLog(.info, text: "Already logged in, using cached token.")
-            return StitchTask<UserId>.withSuccess(auth.userId)
+            return StitchTask<UserId>.withSuccess(userId)
         }
 
         return self.performRequest(method: .post,

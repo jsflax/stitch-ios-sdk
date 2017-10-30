@@ -9,8 +9,6 @@
 import Foundation
 
 public class Auth {
-    public let userId: String
-
     internal var authInfo: AuthInfo
 
     private let stitchClient: StitchClient
@@ -22,7 +20,6 @@ public class Auth {
                   authInfo: AuthInfo) {
         self.stitchClient = stitchClient
         self.authInfo = authInfo
-        self.userId = authInfo.userId
     }
 
     public func createApiKey(name: String) -> StitchTask<ApiKey> {
