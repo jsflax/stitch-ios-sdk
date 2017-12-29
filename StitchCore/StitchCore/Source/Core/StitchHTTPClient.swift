@@ -13,6 +13,8 @@ import PromiseKit
 
 internal class StitchHTTPClient {
     internal let userDefaults = UserDefaults(suiteName: Consts.UserDefaultsName)
+    internal let isAdmin: Bool
+    internal lazy var path = self.isAdmin ? Consts.AdminApiPath : Consts.ApiPath
 
     internal var isSimulator: Bool {
         /*
@@ -24,14 +26,14 @@ internal class StitchHTTPClient {
         return TARGET_OS_SIMULATOR != 0
     }
 
-    let baseUrl, appId: String
+    let baseUrl: String
     let networkAdapter: NetworkAdapter
     internal var authInfo: AuthInfo?
 
-    init(baseUrl: String, appId: String, networkAdapter: NetworkAdapter) {
+    init(baseUrl: String, networkAdapter: NetworkAdapter, isAdmin: Bool = false) {
         self.baseUrl = baseUrl
-        self.appId = appId
         self.networkAdapter = networkAdapter
+        self.isAdmin = isAdmin
     }
 
     /// Whether or not the client is currently authenticated
@@ -179,7 +181,7 @@ internal class StitchHTTPClient {
     }
 
     private func url(withEndpoint endpoint: String) -> String {
-        return "\(baseUrl)\(Consts.ApiPath)\(endpoint)"
+        return "\(baseUrl)\(path)\(endpoint)"
     }
 
     internal typealias RequestBuilder = (inout RequestOptions) throws -> Void

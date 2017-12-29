@@ -8,7 +8,7 @@ import PromiseKit
 public struct Consts {
     public static let DefaultBaseUrl =   "https://stitch.mongodb.com"
     static let ApiPath =                 "/api/client/v2.0/"
-
+    static let AdminApiPath =            "/api/admin/v3.0/"
     //User Defaults
     static let UserDefaultsName =        "com.mongodb.stitch.sdk.UserDefaults"
     static let IsLoggedInUDKey =         "StitchCoreIsLoggedInUserDefaultsKey"
@@ -34,7 +34,6 @@ public class StitchClient: StitchClientType {
     internal let userDefaults = UserDefaults(suiteName: Consts.UserDefaultsName)
 
     internal lazy var httpClient = StitchHTTPClient(baseUrl: baseUrl,
-                                                    appId: appId,
                                                     networkAdapter: networkAdapter)
     private var authProvider: AuthProvider?
     private var authDelegates = [AuthDelegate?]()
@@ -52,7 +51,7 @@ public class StitchClient: StitchClientType {
         mutating func authProvidersLoginRoute(provider: String) -> String {
             return "\(authProvidersExtensionRoute)/\(provider)/login"
         }
-
+        
         lazy var localUserpassResetRoute = "\(authProvidersExtensionRoute)/local-userpass/reset"
         lazy var localUserpassResetSendRoute = "\(authProvidersExtensionRoute)/local-userpass/reset/send"
         lazy var localUserpassRegisterRoute = "\(authProvidersExtensionRoute)/local-userpass/register"

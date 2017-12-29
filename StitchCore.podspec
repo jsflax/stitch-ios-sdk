@@ -11,17 +11,24 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.requires_arc = true
   s.source       = { 
-    :git => "https://github.com/mongodb/stitch-ios-sdk.git",
-    :tag => "#{s.version}"
+    :git => "https://github.com/jsflax/stitch-ios-sdk.git",
+    #:tag => "#{s.version}"
+    :tag => 'STITCH-1036'
   }
-#  s.source_files  = "StitchCore/StitchCore/**/*.swift"
+
+  hh = Dir['StitchCore/PromiseKit/Sources/*.h'] - Dir['StitchCore/PromiseKit/Sources/*+Private.h']
+
+  cc = Dir['StitchCore/PromiseKit/Sources/*.swift'] - ['StitchCore/PromiseKit/Sources/SwiftPM.swift']
+  cc << 'StitchCore/PromiseKit/Sources/{after,AnyPromise,GlobalState,dispatch_promise,hang,join,PMKPromise,when}.m'
+  cc += hh
+
+  s.source_files = cc + Dir["StitchCore/StitchCore/**/*.swift"]
+  s.public_header_files = hh
+  s.preserve_paths = 'StitchCore/PromiseKit/Sources/AnyPromise+Private.h', 'StitchCore/PromiseKit/Sources/PMKCallVariadicBlock.m', 'StitchCore/PromiseKit/Sources/NSMethodSignatureForBlock.m'
+  s.frameworks = 'Foundation'
   s.requires_arc = true
 
-  #s.subspec "PromiseKit" do |pmk|
-  #  pmk.source_files = "StitchCore/PromiseKit/Sources/*.swift"
-  #end
-
-  s.preserve_paths = "StitchCore/Frameworks/PromiseKit.framework"
+  #s.preserve_paths = "StitchCore/Frameworks/PromiseKit.framework"
   s.vendored_frameworks = "StitchCore/Frameworks/PromiseKit.framework"
   #s.dependency "PromiseKit", :git => 'https://github.com/mxcl/PromiseKit', :tag => '5.0.3'
   s.dependency "StitchLogger", "~> 2.0.0"

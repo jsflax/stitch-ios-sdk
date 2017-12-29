@@ -4,3 +4,13 @@
 [submodule "StitchCore/PromiseKit"]
 	path = StitchCore/PromiseKit
 	url = https://github.com/mxcl/PromiseKit/
+
+[submodule "StitchCore/StitchCoreTests/MongoKitten"]
+	path = StitchCore/StitchCoreTests/MongoKitten
+	url = https://github.com/OpenKitten/MongoKitten
+[submodule "StitchCore/StitchCoreTests/MongoKittenX/MongoKittenX/MongoKitten"]
+	path = StitchCore/StitchCoreTests/MongoKittenX/MongoKittenX/MongoKitten
+	url = https://github.com/OpenKitten/MongoKitten
+[submodule "StitchCore/StitchCoreTests/MongoKittenX/MongoKitten"]
+	path = StitchCore/StitchCoreTests/MongoKittenX/MongoKitten
+	url = https://github.com/OpenKitten/MongoKitten
