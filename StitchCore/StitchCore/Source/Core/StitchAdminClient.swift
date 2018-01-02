@@ -80,7 +80,6 @@ public class BoxedView<Model: Codable> {
     }
 }
 
-
 public struct AnyUser: Codable {
     let email: String?
     let password: String?
@@ -119,8 +118,8 @@ public struct AnyAuthProvider: Codable {
     }
     let id: String?
     let name: String?
-    let config: Document
-    let type: String
+    let config: Document?
+    let type: String?
     let disabled: Bool?
 
     public init(type: String,
@@ -256,7 +255,7 @@ public final class AppsView: BoxedView<App> {
 
     public func create(data: App, defaults: Bool = false) -> Promise<App> {
         return httpClient.doRequest {
-            $0.endpoint = "\(self.url)?defaults=\(defaults)"
+            $0.endpoint = "\(self.url)" + (defaults ? "?defaults=\(defaults)" : "")
             $0.method = .post
             try $0.encode(withData: data)
         }.flatMap {
@@ -279,7 +278,8 @@ public class StitchAdminClient {
         self.baseUrl = baseUrl
         self.httpClient = StitchHTTPClient.init(baseUrl: baseUrl,
                                                 networkAdapter: StitchNetworkAdapter(),
-                                                isAdmin: true)
+                                                isAdmin: true,
+                                                storage: UserDefaults(suiteName: Consts.UserDefaultsName + "admin")!)
     }
 
     public func apps(withGroupId groupId: String) -> AppsView {

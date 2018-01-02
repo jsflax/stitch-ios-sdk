@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   #s.preserve_paths = "StitchCore/Frameworks/PromiseKit.framework"
   s.vendored_frameworks = "StitchCore/Frameworks/PromiseKit.framework"
-  #s.dependency "PromiseKit", :git => 'https://github.com/mxcl/PromiseKit', :tag => '5.0.3'
+  s.dependency "PromiseKit", "~> 5.0.0"
   s.dependency "StitchLogger", "~> 2.0.0"
   s.dependency "ExtendedJson", "~> 2.0.1"
 end

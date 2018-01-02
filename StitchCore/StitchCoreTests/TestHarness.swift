@@ -49,7 +49,7 @@ internal class TestHarness {
         return self.adminClient.authenticate(apiKey: self.apiKey)
     }
 
-    func configureUserpass(userpassConfig: UserpassConfig = UserpassConfig(
+    private func configureUserpass(userpassConfig: UserpassConfig = UserpassConfig(
         emailConfirmationUrl: "http://emailConfirmURL.com",
         resetPasswordUrl: "http://resetPasswordURL.com",
         confirmEmailSubject: "email subject",

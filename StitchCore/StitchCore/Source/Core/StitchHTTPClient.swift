@@ -12,7 +12,7 @@ import ExtendedJson
 import PromiseKit
 
 internal class StitchHTTPClient {
-    internal let userDefaults = UserDefaults(suiteName: Consts.UserDefaultsName)
+    internal let userDefaults: Storage
     internal let isAdmin: Bool
     internal lazy var path = self.isAdmin ? Consts.AdminApiPath : Consts.ApiPath
 
@@ -30,10 +30,14 @@ internal class StitchHTTPClient {
     let networkAdapter: NetworkAdapter
     internal var authInfo: AuthInfo?
 
-    init(baseUrl: String, networkAdapter: NetworkAdapter, isAdmin: Bool = false) {
+    init(baseUrl: String,
+         networkAdapter: NetworkAdapter,
+         isAdmin: Bool = false,
+         storage: Storage) {
         self.baseUrl = baseUrl
         self.networkAdapter = networkAdapter
         self.isAdmin = isAdmin
+        self.userDefaults = storage
     }
 
     /// Whether or not the client is currently authenticated
@@ -71,7 +75,7 @@ internal class StitchHTTPClient {
     internal func save(token: String, withKey key: String) {
         if isSimulator {
             printLog(.debug, text: "Falling back to saving token in UserDefaults because of simulator bug")
-            userDefaults?.set(token, forKey: key)
+            userDefaults.set(token, forKey: key)
         } else {
             do {
                 let keychainItem = KeychainPasswordItem(service: Consts.AuthKeychainServiceName, account: key)
@@ -85,7 +89,7 @@ internal class StitchHTTPClient {
     internal func deleteToken(withKey key: String) throws {
         if isSimulator {
             printLog(.debug, text: "Falling back to deleting token from UserDefaults because of simulator bug")
-            userDefaults?.removeObject(forKey: key)
+            userDefaults.remove(forKey: key)
         } else {
             do {
                 let keychainItem = KeychainPasswordItem(service: Consts.AuthKeychainServiceName, account: key)
@@ -109,7 +113,7 @@ internal class StitchHTTPClient {
     }
 
     internal func getAuthFromSavedJwt() throws -> AuthInfo {
-        guard userDefaults?.bool(forKey: Consts.IsLoggedInUDKey) == true else {
+        guard userDefaults.get(forKey: Consts.IsLoggedInUDKey) == true else {
             throw StitchError.unauthorized(message: "must be logged in")
         }
 
@@ -128,7 +132,7 @@ internal class StitchHTTPClient {
     private func readToken(withKey key: String) -> String? {
         if isSimulator {
             printLog(.debug, text: "Falling back to reading token from UserDefaults because of simulator bug")
-            return userDefaults?.object(forKey: key) as? String
+            return userDefaults.get(forKey: key)
         } else {
             do {
                 let keychainItem = KeychainPasswordItem(service: Consts.AuthKeychainServiceName, account: key)

@@ -10,7 +10,7 @@ public struct Consts {
     static let ApiPath =                 "/api/client/v2.0/"
     static let AdminApiPath =            "/api/admin/v3.0/"
     //User Defaults
-    static let UserDefaultsName =        "com.mongodb.stitch.sdk.UserDefaults"
+    static let UserDefaultsName =        "com.mongodb.stitch.sdk.UserDefaults."
     static let IsLoggedInUDKey =         "StitchCoreIsLoggedInUserDefaultsKey"
 
     //keychain
@@ -31,10 +31,11 @@ public class StitchClient: StitchClientType {
     internal var baseUrl: String
     internal let networkAdapter: NetworkAdapter
 
-    internal let userDefaults = UserDefaults(suiteName: Consts.UserDefaultsName)
+    internal let userDefaults: Storage
 
     internal lazy var httpClient = StitchHTTPClient(baseUrl: baseUrl,
-                                                    networkAdapter: networkAdapter)
+                                                    networkAdapter: networkAdapter,
+                                                    storage: userDefaults)
     private var authProvider: AuthProvider?
     private var authDelegates = [AuthDelegate?]()
 
@@ -51,7 +52,7 @@ public class StitchClient: StitchClientType {
         mutating func authProvidersLoginRoute(provider: String) -> String {
             return "\(authProvidersExtensionRoute)/\(provider)/login"
         }
-        
+
         lazy var localUserpassResetRoute = "\(authProvidersExtensionRoute)/local-userpass/reset"
         lazy var localUserpassResetSendRoute = "\(authProvidersExtensionRoute)/local-userpass/reset/send"
         lazy var localUserpassRegisterRoute = "\(authProvidersExtensionRoute)/local-userpass/register"
@@ -86,7 +87,7 @@ public class StitchClient: StitchClientType {
         didSet {
             if let refreshToken = httpClient.authInfo?.refreshToken {
                 // save auth persistently
-                userDefaults?.set(true, forKey: Consts.IsLoggedInUDKey)
+                userDefaults.set(true, forKey: Consts.IsLoggedInUDKey)
 
                 do {
                     let jsonData = try JSONEncoder().encode(httpClient.authInfo)
@@ -106,7 +107,7 @@ public class StitchClient: StitchClientType {
             } else {
                 // remove from keychain
                 try? self.httpClient.deleteToken(withKey: Consts.AuthJwtKey)
-                userDefaults?.set(false, forKey: Consts.IsLoggedInUDKey)
+                userDefaults.set(false, forKey: Consts.IsLoggedInUDKey)
             }
         }
     }
@@ -136,10 +137,12 @@ public class StitchClient: StitchClientType {
      */
     public init(appId: String,
                 baseUrl: String = Consts.DefaultBaseUrl,
-                networkAdapter: NetworkAdapter = StitchNetworkAdapter()) {
+                networkAdapter: NetworkAdapter = StitchNetworkAdapter(),
+                storage: Storage? = nil) {
         self.appId = appId
         self.baseUrl = baseUrl
         self.networkAdapter = networkAdapter
+        self.userDefaults = storage == nil ? UserDefaults(suiteName: Consts.UserDefaultsName + appId)! : storage!
     }
 
     // MARK: - Auth

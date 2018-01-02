@@ -14,3 +14,6 @@
 [submodule "StitchCore/StitchCoreTests/MongoKittenX/MongoKitten"]
 	path = StitchCore/StitchCoreTests/MongoKittenX/MongoKitten
 	url = https://github.com/OpenKitten/MongoKitten
+[submodule "StitchCore/StitchCoreTests/mailcore2"]
+	path = StitchCore/StitchCoreTests/mailcore2
+	url = https://github.com/MailCore/mailcore2/
