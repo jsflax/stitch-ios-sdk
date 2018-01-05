@@ -43,6 +43,7 @@
 		49A897721FFC147C00D1DF39 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897651FFC145900D1DF39 /* libMailCore-ios.a */; };
 		49A897741FFC148500D1DF39 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897731FFC148500D1DF39 /* CFNetwork.framework */; };
 		49A897761FFC148C00D1DF39 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897751FFC148C00D1DF39 /* Security.framework */; };
+		49A897A6200018E900D1DF39 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A89785200018E900D1DF39 /* PromiseKit.framework */; };
 		49B2AA1F1F97EB69004AF23D /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2AA1E1F97EB69004AF23D /* ApiKey.swift */; };
 		49B5DB321FD7042E00A3B692 /* JWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B5DB2B1FD7041800A3B692 /* JWT.framework */; };
 		49CB28591FBB856200F99DCD /* TwilioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB28581FBB856200F99DCD /* TwilioService.swift */; };
@@ -307,6 +308,7 @@
 		49A897731FFC148500D1DF39 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		49A897751FFC148C00D1DF39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		49A897791FFC157E00D1DF39 /* StitchCoreTests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StitchCoreTests-BridgingHeader.h"; sourceTree = "<group>"; };
+		49A89785200018E900D1DF39 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		49B2AA1E1F97EB69004AF23D /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		49B5DB201FD7041700A3B692 /* JWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWT.xcodeproj; path = JSONWebToken.swift/JWT.xcodeproj; sourceTree = SOURCE_ROOT; };
 		49CB28581FBB856200F99DCD /* TwilioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioService.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A897A6200018E900D1DF39 /* PromiseKit.framework in Frameworks */,
 				498A74B91FE9EB640078FFEC /* ExtendedJson.framework in Frameworks */,
 				495F4C0D1FE9E53700EC0009 /* PromiseKit.framework in Frameworks */,
 			);
@@ -550,6 +553,7 @@
 		498C7B871F9FEC36009CB84D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49A89785200018E900D1DF39 /* PromiseKit.framework */,
 				49A897751FFC148C00D1DF39 /* Security.framework */,
 				49A897731FFC148500D1DF39 /* CFNetwork.framework */,
 				498E07FF1FE9F4680091A9A8 /* MongoDBService.framework */,

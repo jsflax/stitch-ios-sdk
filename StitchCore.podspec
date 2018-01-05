@@ -16,21 +16,13 @@ Pod::Spec.new do |s|
     :tag => 'STITCH-1036'
   }
 
-  hh = Dir['StitchCore/PromiseKit/Sources/*.h'] - Dir['StitchCore/PromiseKit/Sources/*+Private.h']
-
-  cc = Dir['StitchCore/PromiseKit/Sources/*.swift'] - ['StitchCore/PromiseKit/Sources/SwiftPM.swift']
-  cc << 'StitchCore/PromiseKit/Sources/{after,AnyPromise,GlobalState,dispatch_promise,hang,join,PMKPromise,when}.m'
-  cc += hh
-
-  s.source_files = cc + Dir["StitchCore/StitchCore/**/*.swift"]
-  s.public_header_files = hh
-  s.preserve_paths = 'StitchCore/PromiseKit/Sources/AnyPromise+Private.h', 'StitchCore/PromiseKit/Sources/PMKCallVariadicBlock.m', 'StitchCore/PromiseKit/Sources/NSMethodSignatureForBlock.m'
+  s.source_files = Dir["StitchCore/StitchCore/**/*.swift"]
   s.frameworks = 'Foundation'
   s.requires_arc = true
 
-  #s.preserve_paths = "StitchCore/Frameworks/PromiseKit.framework"
-  s.vendored_frameworks = "StitchCore/Frameworks/PromiseKit.framework"
-  s.dependency "PromiseKit", "~> 5.0.0"
+  s.preserve_paths = './StitchCore/PromiseKit.framework'
+  s.vendored_frameworks = './StitchCore/PromiseKit.framework'
+#  s.dependency "PromiseKit", :tag => 'https://github.com/mxcl/PromiseKit/releases/tag/5.0.3'
   s.dependency "StitchLogger", "~> 2.0.0"
   s.dependency "ExtendedJson", "~> 2.0.1"
 end
