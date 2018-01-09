@@ -11,15 +11,56 @@
 		36A023111EEEEE1500450FB1 /* StitchLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A023101EEEEE1500450FB1 /* StitchLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		49A897CF2003F9EC00D1DF39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3685F3BE1E82FD23001DFDD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A897BA2003F9EC00D1DF39;
+			remoteInfo = StitchCoreUITests;
+		};
+		49A897DA2003F9EC00D1DF39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3685F3BE1E82FD23001DFDD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A897BA2003F9EC00D1DF39;
+			remoteInfo = StitchCoreUITests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3685F3C71E82FD23001DFDD7 /* StitchLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StitchLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A022E11EEEE81100450FB1 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		36A022E31EEEE81100450FB1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36A023101EEEEE1500450FB1 /* StitchLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StitchLogger.h; sourceTree = "<group>"; };
+		49A897BB2003F9EC00D1DF39 /* StitchCoreUITests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StitchCoreUITests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A897CE2003F9EC00D1DF39 /* StitchCoreUITestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchCoreUITestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A897D92003F9EC00D1DF39 /* StitchCoreUITestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchCoreUITestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3685F3C31E82FD23001DFDD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897B82003F9EC00D1DF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897CB2003F9EC00D1DF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897D62003F9EC00D1DF39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				3685F3C71E82FD23001DFDD7 /* StitchLogger.framework */,
+				49A897BB2003F9EC00D1DF39 /* StitchCoreUITests.app */,
+				49A897CE2003F9EC00D1DF39 /* StitchCoreUITestsTests.xctest */,
+				49A897D92003F9EC00D1DF39 /* StitchCoreUITestsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,12 +147,66 @@
 			productReference = 3685F3C71E82FD23001DFDD7 /* StitchLogger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		49A897BA2003F9EC00D1DF39 /* StitchCoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A897E62003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITests" */;
+			buildPhases = (
+				49A897B72003F9EC00D1DF39 /* Sources */,
+				49A897B82003F9EC00D1DF39 /* Frameworks */,
+				49A897B92003F9EC00D1DF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StitchCoreUITests;
+			productName = StitchCoreUITests;
+			productReference = 49A897BB2003F9EC00D1DF39 /* StitchCoreUITests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49A897CD2003F9EC00D1DF39 /* StitchCoreUITestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A897E72003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITestsTests" */;
+			buildPhases = (
+				49A897CA2003F9EC00D1DF39 /* Sources */,
+				49A897CB2003F9EC00D1DF39 /* Frameworks */,
+				49A897CC2003F9EC00D1DF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A897D02003F9EC00D1DF39 /* PBXTargetDependency */,
+			);
+			name = StitchCoreUITestsTests;
+			productName = StitchCoreUITestsTests;
+			productReference = 49A897CE2003F9EC00D1DF39 /* StitchCoreUITestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49A897D82003F9EC00D1DF39 /* StitchCoreUITestsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A897E82003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITestsUITests" */;
+			buildPhases = (
+				49A897D52003F9EC00D1DF39 /* Sources */,
+				49A897D62003F9EC00D1DF39 /* Frameworks */,
+				49A897D72003F9EC00D1DF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A897DB2003F9EC00D1DF39 /* PBXTargetDependency */,
+			);
+			name = StitchCoreUITestsUITests;
+			productName = StitchCoreUITestsUITests;
+			productReference = 49A897D92003F9EC00D1DF39 /* StitchCoreUITestsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3685F3BE1E82FD23001DFDD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = MongoDB;
 				TargetAttributes = {
@@ -116,6 +214,23 @@
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+					};
+					49A897BA2003F9EC00D1DF39 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 2Z8M9MTEVV;
+						ProvisioningStyle = Automatic;
+					};
+					49A897CD2003F9EC00D1DF39 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 2Z8M9MTEVV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49A897BA2003F9EC00D1DF39;
+					};
+					49A897D82003F9EC00D1DF39 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 2Z8M9MTEVV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49A897BA2003F9EC00D1DF39;
 					};
 				};
 			};
@@ -125,6 +240,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3685F3BD1E82FD23001DFDD7;
 			productRefGroup = 3685F3C81E82FD23001DFDD7 /* Products */;
@@ -132,12 +248,36 @@
 			projectRoot = "";
 			targets = (
 				3685F3C61E82FD23001DFDD7 /* StitchLogger */,
+				49A897BA2003F9EC00D1DF39 /* StitchCoreUITests */,
+				49A897CD2003F9EC00D1DF39 /* StitchCoreUITestsTests */,
+				49A897D82003F9EC00D1DF39 /* StitchCoreUITestsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3685F3C51E82FD23001DFDD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897B92003F9EC00D1DF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897CC2003F9EC00D1DF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897D72003F9EC00D1DF39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,7 +295,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49A897B72003F9EC00D1DF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897CA2003F9EC00D1DF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A897D52003F9EC00D1DF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49A897D02003F9EC00D1DF39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A897BA2003F9EC00D1DF39 /* StitchCoreUITests */;
+			targetProxy = 49A897CF2003F9EC00D1DF39 /* PBXContainerItemProxy */;
+		};
+		49A897DB2003F9EC00D1DF39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A897BA2003F9EC00D1DF39 /* StitchCoreUITests */;
+			targetProxy = 49A897DA2003F9EC00D1DF39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3685F3CD1E82FD23001DFDD7 /* Debug */ = {
@@ -310,6 +484,134 @@
 			};
 			name = Release;
 		};
+		49A897E02003F9EC00D1DF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49A897E12003F9EC00D1DF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49A897E22003F9EC00D1DF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchCoreUITests.app/StitchCoreUITests";
+			};
+			name = Debug;
+		};
+		49A897E32003F9EC00D1DF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchCoreUITests.app/StitchCoreUITests";
+			};
+			name = Release;
+		};
+		49A897E42003F9EC00D1DF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITestsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITestsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StitchCoreUITests;
+			};
+			name = Debug;
+		};
+		49A897E52003F9EC00D1DF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITestsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITestsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StitchCoreUITests;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +629,33 @@
 			buildConfigurations = (
 				3685F3D01E82FD23001DFDD7 /* Debug */,
 				3685F3D11E82FD23001DFDD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A897E62003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A897E02003F9EC00D1DF39 /* Debug */,
+				49A897E12003F9EC00D1DF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A897E72003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A897E22003F9EC00D1DF39 /* Debug */,
+				49A897E32003F9EC00D1DF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A897E82003F9EC00D1DF39 /* Build configuration list for PBXNativeTarget "StitchCoreUITestsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A897E42003F9EC00D1DF39 /* Debug */,
+				49A897E52003F9EC00D1DF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,5 +9,4 @@
 #ifndef StitchCoreTests_BridgingHeader_h
 #define StitchCoreTests_BridgingHeader_h
 
-#import <MailCore/MailCore.h>
 #endif /* StitchCoreTests_BridgingHeader_h */

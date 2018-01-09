@@ -24,9 +24,9 @@
 		36A024C01EEF043A00450FB1 /* StitchCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A023CA1EEEFE6200450FB1 /* StitchCoreTests.swift */; };
 		490572EE1F9A4F8F00CC8230 /* DecodedJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490572EC1F9A4F8F00CC8230 /* DecodedJWT.swift */; };
 		49160CFB1FBE227700966194 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49160CFA1FBE227700966194 /* ServiceTests.swift */; };
+		49211F9220040D7F00597611 /* GoogleAuthProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49211F9120040D7F00597611 /* GoogleAuthProviderTests.swift */; };
 		4927D74C1FC0EE21006D8031 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927D74B1FC0EE21006D8031 /* AuthTests.swift */; };
 		49580F121F98356800D4B9B3 /* StitchNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49580F111F98356800D4B9B3 /* StitchNetworkAdapter.swift */; };
-		495F4C0D1FE9E53700EC0009 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495F4C011FE9E52100EC0009 /* PromiseKit.framework */; };
 		497DB4B91FEF0FEB00EBA597 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB4B81FEF0FEB00EBA597 /* AppTests.swift */; };
 		497DB4BB1FEF107900EBA597 /* TestHarness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB4BA1FEF107900EBA597 /* TestHarness.swift */; };
 		497DB4BD1FEF110700EBA597 /* StitchFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DB4BC1FEF110700EBA597 /* StitchFixture.swift */; };
@@ -40,10 +40,10 @@
 		49A897151FF5C3A300D1DF39 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A897141FF5C3A300D1DF39 /* Utils.swift */; };
 		49A897301FF6E9B400D1DF39 /* EmailPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8972F1FF6E9B400D1DF39 /* EmailPassTests.swift */; };
 		49A8973D1FFC09BA00D1DF39 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8973C1FFC09BA00D1DF39 /* Storage.swift */; };
-		49A897721FFC147C00D1DF39 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897651FFC145900D1DF39 /* libMailCore-ios.a */; };
 		49A897741FFC148500D1DF39 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897731FFC148500D1DF39 /* CFNetwork.framework */; };
 		49A897761FFC148C00D1DF39 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897751FFC148C00D1DF39 /* Security.framework */; };
-		49A897A6200018E900D1DF39 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A89785200018E900D1DF39 /* PromiseKit.framework */; };
+		49A897A82000233100D1DF39 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A897A72000233100D1DF39 /* PromiseKit.framework */; };
+		49A897B62003F13400D1DF39 /* GoogleAuthProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A897B52003F13400D1DF39 /* GoogleAuthProviderTests.swift */; };
 		49B2AA1F1F97EB69004AF23D /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2AA1E1F97EB69004AF23D /* ApiKey.swift */; };
 		49B5DB321FD7042E00A3B692 /* JWT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B5DB2B1FD7041800A3B692 /* JWT.framework */; };
 		49CB28591FBB856200F99DCD /* TwilioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CB28581FBB856200F99DCD /* TwilioService.swift */; };
@@ -67,6 +67,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 367E0B0E1E43419500EE2C00;
 			remoteInfo = MongoCore;
+		};
+		49211FDC2004117E00597611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49211FD82004117E00597611 /* StitchCoreUITestApp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49211FA220040E8F00597611;
+			remoteInfo = StitchCoreUITestApp;
 		};
 		495F4C001FE9E52100EC0009 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -166,69 +173,6 @@
 			remoteGlobalIDString = "BSON::BSON::Product";
 			remoteInfo = BSON;
 		};
-		49A897621FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA537169E772200778456;
-			remoteInfo = "static mailcore2 osx";
-		};
-		49A897641FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
-		};
-		49A897661FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA78C169F259200778456;
-			remoteInfo = tests;
-		};
-		49A897681FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6A81B911706840C00882C15;
-			remoteInfo = "test-ios";
-		};
-		49A8976A1FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
-			remoteInfo = "mailcore osx";
-		};
-		49A8976C1FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 27780C3A19CF9CD100C77E44;
-			remoteInfo = "mailcore ios";
-		};
-		49A8976E1FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6B5AE0219F630B3001352A6;
-			remoteInfo = unittest;
-		};
-		49A897701FFC145900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C600B6141A242C3F000728F1;
-			remoteInfo = unittestcpp;
-		};
-		49A897771FFC14B900D1DF39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C6BA2B091705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
-		};
 		49B5DB281FD7041800A3B692 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49B5DB201FD7041700A3B692 /* JWT.xcodeproj */;
@@ -288,6 +232,10 @@
 		36DD05571E7C412100E9A764 /* StitchCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490572EC1F9A4F8F00CC8230 /* DecodedJWT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodedJWT.swift; sourceTree = "<group>"; };
 		49160CFA1FBE227700966194 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
+		49211F8F20040D7F00597611 /* StitchCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StitchCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49211F9120040D7F00597611 /* GoogleAuthProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthProviderTests.swift; sourceTree = "<group>"; };
+		49211F9320040D7F00597611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49211FD82004117E00597611 /* StitchCoreUITestApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = StitchCoreUITestApp.xcodeproj; sourceTree = "<group>"; };
 		4927D74B1FC0EE21006D8031 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		49580F111F98356800D4B9B3 /* StitchNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchNetworkAdapter.swift; sourceTree = "<group>"; };
 		495F4BF81FE9E52100EC0009 /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
@@ -304,11 +252,11 @@
 		49A897141FF5C3A300D1DF39 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		49A8972F1FF6E9B400D1DF39 /* EmailPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassTests.swift; sourceTree = "<group>"; };
 		49A8973C1FFC09BA00D1DF39 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "mailcore2/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
 		49A897731FFC148500D1DF39 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		49A897751FFC148C00D1DF39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		49A897791FFC157E00D1DF39 /* StitchCoreTests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StitchCoreTests-BridgingHeader.h"; sourceTree = "<group>"; };
-		49A89785200018E900D1DF39 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		49A897A72000233100D1DF39 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		49A897B52003F13400D1DF39 /* GoogleAuthProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthProviderTests.swift; sourceTree = "<group>"; };
 		49B2AA1E1F97EB69004AF23D /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		49B5DB201FD7041700A3B692 /* JWT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JWT.xcodeproj; path = JSONWebToken.swift/JWT.xcodeproj; sourceTree = SOURCE_ROOT; };
 		49CB28581FBB856200F99DCD /* TwilioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioService.swift; sourceTree = "<group>"; };
@@ -330,9 +278,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A897A6200018E900D1DF39 /* PromiseKit.framework in Frameworks */,
+				49A897A82000233100D1DF39 /* PromiseKit.framework in Frameworks */,
 				498A74B91FE9EB640078FFEC /* ExtendedJson.framework in Frameworks */,
-				495F4C0D1FE9E53700EC0009 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,10 +289,16 @@
 			files = (
 				49A897761FFC148C00D1DF39 /* Security.framework in Frameworks */,
 				49A897741FFC148500D1DF39 /* CFNetwork.framework in Frameworks */,
-				49A897721FFC147C00D1DF39 /* libMailCore-ios.a in Frameworks */,
 				49A897061FF547FD00D1DF39 /* MongoKitten.framework in Frameworks */,
 				49B5DB321FD7042E00A3B692 /* JWT.framework in Frameworks */,
 				498E07FE1FE9F4680091A9A8 /* MongoDBService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49211F8C20040D7F00597611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +311,7 @@
 				495F4BF81FE9E52100EC0009 /* PromiseKit.xcodeproj */,
 				36A0232D1EEEFE6100450FB1 /* StitchCore */,
 				36A023C81EEEFE6200450FB1 /* StitchCoreTests */,
+				49211F9020040D7F00597611 /* StitchCoreUITests */,
 				367E0B101E43419500EE2C00 /* Products */,
 				498C7B871F9FEC36009CB84D /* Frameworks */,
 			);
@@ -368,6 +322,7 @@
 			children = (
 				367E0B0F1E43419500EE2C00 /* StitchCore.framework */,
 				36DD05571E7C412100E9A764 /* StitchCoreTests.xctest */,
+				49211F8F20040D7F00597611 /* StitchCoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -496,7 +451,6 @@
 		36A023C81EEEFE6200450FB1 /* StitchCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */,
 				49A896DE1FF547C100D1DF39 /* MongoKitten.xcodeproj */,
 				49B5DB201FD7041700A3B692 /* JWT.xcodeproj */,
 				497DB4AD1FEF0FCF00EBA597 /* Admin */,
@@ -511,6 +465,24 @@
 				49A897791FFC157E00D1DF39 /* StitchCoreTests-BridgingHeader.h */,
 			);
 			path = StitchCoreTests;
+			sourceTree = "<group>";
+		};
+		49211F9020040D7F00597611 /* StitchCoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49211FD82004117E00597611 /* StitchCoreUITestApp.xcodeproj */,
+				49211F9120040D7F00597611 /* GoogleAuthProviderTests.swift */,
+				49211F9320040D7F00597611 /* Info.plist */,
+			);
+			path = StitchCoreUITests;
+			sourceTree = "<group>";
+		};
+		49211FD92004117E00597611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49211FDD2004117E00597611 /* StitchCoreUITestApp.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		493CE3691FD0AF220006E730 /* Custom */ = {
@@ -553,7 +525,7 @@
 		498C7B871F9FEC36009CB84D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49A89785200018E900D1DF39 /* PromiseKit.framework */,
+				49A897A72000233100D1DF39 /* PromiseKit.framework */,
 				49A897751FFC148C00D1DF39 /* Security.framework */,
 				49A897731FFC148500D1DF39 /* CFNetwork.framework */,
 				498E07FF1FE9F4680091A9A8 /* MongoDBService.framework */,
@@ -582,23 +554,9 @@
 			isa = PBXGroup;
 			children = (
 				49A8972F1FF6E9B400D1DF39 /* EmailPassTests.swift */,
+				49A897B52003F13400D1DF39 /* GoogleAuthProviderTests.swift */,
 			);
 			path = Client;
-			sourceTree = "<group>";
-		};
-		49A897581FFC145800D1DF39 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				49A897631FFC145900D1DF39 /* libMailCore.a */,
-				49A897651FFC145900D1DF39 /* libMailCore-ios.a */,
-				49A897671FFC145900D1DF39 /* tests */,
-				49A897691FFC145900D1DF39 /* test-ios.app */,
-				49A8976B1FFC145900D1DF39 /* MailCore.framework */,
-				49A8976D1FFC145900D1DF39 /* MailCore.framework */,
-				49A8976F1FFC145900D1DF39 /* unittest.xctest */,
-				49A897711FFC145900D1DF39 /* unittestcpp */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		49B5DB211FD7041700A3B692 /* Products */ = {
@@ -697,7 +655,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				49A897781FFC14B900D1DF39 /* PBXTargetDependency */,
 				36DD055E1E7C412100E9A764 /* PBXTargetDependency */,
 			);
 			name = StitchCoreTests;
@@ -705,13 +662,30 @@
 			productReference = 36DD05571E7C412100E9A764 /* StitchCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		49211F8E20040D7F00597611 /* StitchCoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49211F9620040D7F00597611 /* Build configuration list for PBXNativeTarget "StitchCoreUITests" */;
+			buildPhases = (
+				49211F8B20040D7F00597611 /* Sources */,
+				49211F8C20040D7F00597611 /* Frameworks */,
+				49211F8D20040D7F00597611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StitchCoreUITests;
+			productName = StitchCoreUITests;
+			productReference = 49211F8F20040D7F00597611 /* StitchCoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		367E0B061E43419500EE2C00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = MongoDB;
 				TargetAttributes = {
@@ -723,6 +697,13 @@
 					36DD05561E7C412100E9A764 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 49A8982820040A0400D1DF39;
+					};
+					49211F8E20040D7F00597611 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 2Z8M9MTEVV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49211F7820040D6C00597611;
 					};
 				};
 			};
@@ -743,10 +724,6 @@
 					ProjectRef = 49B5DB201FD7041700A3B692 /* JWT.xcodeproj */;
 				},
 				{
-					ProductGroup = 49A897581FFC145800D1DF39 /* Products */;
-					ProjectRef = 49A897571FFC145800D1DF39 /* mailcore2.xcodeproj */;
-				},
-				{
 					ProductGroup = 49A896DF1FF547C100D1DF39 /* Products */;
 					ProjectRef = 49A896DE1FF547C100D1DF39 /* MongoKitten.xcodeproj */;
 				},
@@ -754,16 +731,28 @@
 					ProductGroup = 495F4BF91FE9E52100EC0009 /* Products */;
 					ProjectRef = 495F4BF81FE9E52100EC0009 /* PromiseKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 49211FD92004117E00597611 /* Products */;
+					ProjectRef = 49211FD82004117E00597611 /* StitchCoreUITestApp.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				367E0B0E1E43419500EE2C00 /* StitchCore */,
 				36DD05561E7C412100E9A764 /* StitchCoreTests */,
+				49211F8E20040D7F00597611 /* StitchCoreUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		49211FDD2004117E00597611 /* StitchCoreUITestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = StitchCoreUITestApp.app;
+			remoteRef = 49211FDC2004117E00597611 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		495F4C011FE9E52100EC0009 /* PromiseKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -862,62 +851,6 @@
 			remoteRef = 49A897041FF547C100D1DF39 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		49A897631FFC145900D1DF39 /* libMailCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMailCore.a;
-			remoteRef = 49A897621FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A897651FFC145900D1DF39 /* libMailCore-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libMailCore-ios.a";
-			remoteRef = 49A897641FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A897671FFC145900D1DF39 /* tests */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = tests;
-			remoteRef = 49A897661FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A897691FFC145900D1DF39 /* test-ios.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "test-ios.app";
-			remoteRef = 49A897681FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A8976B1FFC145900D1DF39 /* MailCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MailCore.framework;
-			remoteRef = 49A8976A1FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A8976D1FFC145900D1DF39 /* MailCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MailCore.framework;
-			remoteRef = 49A8976C1FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A8976F1FFC145900D1DF39 /* unittest.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = unittest.xctest;
-			remoteRef = 49A8976E1FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		49A897711FFC145900D1DF39 /* unittestcpp */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = unittestcpp;
-			remoteRef = 49A897701FFC145900D1DF39 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		49B5DB291FD7041800A3B692 /* JWT.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -964,6 +897,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		36DD05551E7C412100E9A764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49211F8D20040D7F00597611 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1037,10 +977,19 @@
 				49A897301FF6E9B400D1DF39 /* EmailPassTests.swift in Sources */,
 				36A024C01EEF043A00450FB1 /* StitchCoreTests.swift in Sources */,
 				497DB4BB1FEF107900EBA597 /* TestHarness.swift in Sources */,
+				49A897B62003F13400D1DF39 /* GoogleAuthProviderTests.swift in Sources */,
 				49A897151FF5C3A300D1DF39 /* Utils.swift in Sources */,
 				497DB4B91FEF0FEB00EBA597 /* AppTests.swift in Sources */,
 				4927D74C1FC0EE21006D8031 /* AuthTests.swift in Sources */,
 				49160CFB1FBE227700966194 /* ServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49211F8B20040D7F00597611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49211F9220040D7F00597611 /* GoogleAuthProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,11 +1000,6 @@
 			isa = PBXTargetDependency;
 			target = 367E0B0E1E43419500EE2C00 /* StitchCore */;
 			targetProxy = 36DD055D1E7C412100E9A764 /* PBXContainerItemProxy */;
-		};
-		49A897781FFC14B900D1DF39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "static mailcore2 ios";
-			targetProxy = 49A897771FFC14B900D1DF39 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1231,7 +1175,7 @@
 		36DD055F1E7C412100E9A764 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1240,23 +1184,11 @@
 				INFOPLIST_FILE = StitchCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lc++",
-					"-lresolv",
-					"-stdlib=libc++",
-					"-ObjC",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StitchCoreTests/StitchCoreTests-BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchCoreUITests.app/StitchCoreUITests";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -1264,7 +1196,7 @@
 		36DD05601E7C412100E9A764 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1273,24 +1205,54 @@
 				INFOPLIST_FILE = StitchCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lc++",
-					"-lresolv",
-					"-stdlib=libc++",
-					"-ObjC",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mongodb.StitchCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StitchCoreTests/StitchCoreTests-BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StitchCoreUITests.app/StitchCoreUITests";
 				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		49211F9720040D7F00597611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StitchCoreUITestApp;
+			};
+			name = Debug;
+		};
+		49211F9820040D7F00597611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8M9MTEVV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StitchCoreUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mongo.StitchCoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StitchCoreUITestApp;
 			};
 			name = Release;
 		};
@@ -1304,7 +1266,7 @@
 				367E0B161E43419500EE2C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		367E0B171E43419500EE2C00 /* Build configuration list for PBXNativeTarget "StitchCore" */ = {
 			isa = XCConfigurationList;
@@ -1313,7 +1275,7 @@
 				367E0B191E43419500EE2C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		36DD056B1E7C412100E9A764 /* Build configuration list for PBXNativeTarget "StitchCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -1322,7 +1284,16 @@
 				36DD05601E7C412100E9A764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		49211F9620040D7F00597611 /* Build configuration list for PBXNativeTarget "StitchCoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49211F9720040D7F00597611 /* Debug */,
+				49211F9820040D7F00597611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

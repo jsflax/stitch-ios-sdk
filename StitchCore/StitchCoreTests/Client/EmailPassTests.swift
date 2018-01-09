@@ -9,31 +9,31 @@
 import Foundation
 import XCTest
 
-private func setUpSMTP() {
-    let session = MCOIMAPSession.init()
-    session.hostname = "gmail.com"
-    //session.port = 587
-    session.username = "stitch.tester@gmail.com"
-    session.password = "st123456"
-    session.connectionType = MCOConnectionType.TLS
-
-    let requestKind = MCOIMAPMessagesRequestKind.headers
-    let folder = "INBOX"
-    let uids = MCOIndexSet.init(range: MCORangeMake(1, UInt64.max))
-
-    session.connectOperation().start { err in
-        print(err)
-    }
-
-    let fetchOperation = session.fetchMessagesOperation(withFolder: folder, requestKind: requestKind, uids: uids)
-    fetchOperation?.start { (err, messages, indexSet) in
-        if let err = err {
-            print(err)
-        }
-
-        print(messages)
-    }
-}
+//private func setUpSMTP() {
+//    let session = MCOIMAPSession.init()
+//    session.hostname = "gmail.com"
+//    //session.port = 587
+//    session.username = "stitch.tester@gmail.com"
+//    session.password = "st123456"
+//    session.connectionType = MCOConnectionType.TLS
+//
+//    let requestKind = MCOIMAPMessagesRequestKind.headers
+//    let folder = "INBOX"
+//    let uids = MCOIndexSet.init(range: MCORangeMake(1, UInt64.max))
+//
+//    session.connectOperation().start { err in
+//        print(err)
+//    }
+//
+//    let fetchOperation = session.fetchMessagesOperation(withFolder: folder, requestKind: requestKind, uids: uids)
+//    fetchOperation?.start { (err, messages, indexSet) in
+//        if let err = err {
+//            print(err)
+//        }
+//
+//        print(messages)
+//    }
+//}
 
 class EmailPassTests: XCTestCase {
     let testAppName = "testapp"
@@ -57,7 +57,7 @@ class EmailPassTests: XCTestCase {
         (_, err) = await(try! harness.setupStitchClient())
         guard err == nil else { fatalError(err!.localizedDescription) }
         self.th = harness
-        setUpSMTP()
+        //setUpSMTP()
     }
 
     override func tearDown() {
