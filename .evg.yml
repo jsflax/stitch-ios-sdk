@@ -71,10 +71,14 @@ tasks:
             cd StitchCore
             swift test
 buildvariants:
-- name: linux-64
-  display_name: Linux-64
-  run_on:
-    - baas-linux
+- name: macos
+  display_name: MacOS
+  values:
+      - id: macos-1012
+        display_name: "macOS 10.12"
+        run_on: macos-1012
+        variables:
+          COMPILE_ENV: DEVELOPER_DIR=/Applications/Xcode9.2.app
   tasks:
     - name: github_pull_request_start
     - name: run_tests
