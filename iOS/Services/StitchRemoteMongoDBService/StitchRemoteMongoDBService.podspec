@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     spec.platform = :ios, "11.0"
     spec.source     = {
       :git => "https://github.com/jsflax/stitch-ios-sdk.git",
-      :branch => "v4-alpha",
+      :branch => "PATCH_UmbrellaSpec",
       :submodules => true
     }
   
@@ -21,8 +21,6 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true
     
     spec.prepare_command = "sh prep_pods.sh --module=#{spec.name} --sources=#{spec.name}"
-
-    spec.module_name = 'StitchSDK'
 
     spec.source_files = "dist/#{spec.name}/**/*.swift"
 

@@ -73,38 +73,38 @@
 /////////////////////////
 // StitchAWSSESService //
 /////////////////////////
-
+#if canImport(StitchAWSSESService)
 // from core
 @_exported import struct StitchAWSSESService.AWSSESSendResult
 
 // from iOS-specific module
 @_exported import protocol StitchAWSSESService.AWSSESServiceClient
 @_exported import class StitchAWSSESService.AWSSESService
-
+#endif
 //////////////////////
 // StitchFCMService //
 //////////////////////
-
+#if canImport(StitchFCMService)
 // from core
-@_exported import struct StitchCoreFCMService.FCMSendMessageNotification
-@_exported import class StitchCoreFCMService.FCMSendMessageNotificationBuilder
-@_exported import enum StitchCoreFCMService.FCMSendMessagePriority
-@_exported import struct StitchCoreFCMService.FCMSendMessageRequest
-@_exported import class StitchCoreFCMService.FCMSendMessageRequestBuilder
-@_exported import struct StitchCoreFCMService.FCMSendMessageResult
-@_exported import struct StitchCoreFCMService.FCMSendMessageResultFailureDetail
+@_exported import struct StitchFCMService.FCMSendMessageNotification
+@_exported import class StitchFCMService.FCMSendMessageNotificationBuilder
+@_exported import enum StitchFCMService.FCMSendMessagePriority
+@_exported import struct StitchFCMService.FCMSendMessageRequest
+@_exported import class StitchFCMService.FCMSendMessageRequestBuilder
+@_exported import struct StitchFCMService.FCMSendMessageResult
+@_exported import struct StitchFCMService.FCMSendMessageResultFailureDetail
 
 // from iOS-specific module
 @_exported import protocol StitchFCMService.FCMServicePushClient
 @_exported import let StitchFCMService.fcmServicePushClientFactory
 @_exported import protocol StitchFCMService.FCMServiceClient
 @_exported import let StitchFCMService.fcmServiceClientFactory
-
+#endif
 
 ///////////////////////
 // StitchHTTPService //
 ///////////////////////
-
+#if canImport(StitchHTTPService)
 // from core
 @_exported import struct StitchHTTPService.HTTPCookie
 @_exported import enum StitchHTTPService.HTTPMethod
@@ -112,16 +112,16 @@
 @_exported import class StitchHTTPService.HTTPRequestBuilder
 @_exported import enum StitchHTTPService.HTTPRequestBuilderError
 @_exported import struct StitchHTTPService.HTTPResponse
-
 // from iOS-specific module
 @_exported import protocol StitchHTTPService.HTTPServiceClient
 @_exported import class StitchHTTPService.HTTPService
-
+#endif
 ////////////////////////////////
 // StitchRemoteMongoDBService //
 ////////////////////////////////
 
 // from core
+#if canImport(StitchRemoteMongoDBService)
 @_exported import struct StitchRemoteMongoDBService.RemoteCountOptions
 @_exported import struct StitchRemoteMongoDBService.RemoteDeleteResult
 @_exported import struct StitchRemoteMongoDBService.RemoteFindOptions
@@ -137,11 +137,12 @@
 @_exported import class StitchRemoteMongoDBService.RemoteMongoCursor
 @_exported import class StitchRemoteMongoDBService.RemoteMongoDatabase
 @_exported import class StitchRemoteMongoDBService.RemoteMongoReadOperation
-
+#endif
 /////////////////////////
 // StitchTwilioService //
 /////////////////////////
-
+#if canImport(StitchTwilioService)
 // from iOS-specific module
 @_exported import class StitchTwilioService.TwilioService
 @_exported import protocol StitchTwilioService.TwilioServiceClient
+#endif
