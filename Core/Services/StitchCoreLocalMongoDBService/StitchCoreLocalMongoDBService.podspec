@@ -60,9 +60,9 @@ Pod::Spec.new do |spec|
     #   }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
     # end
     
-    spec.ios.vendored_library = vendor_path.call "iphoneos"
-    spec.tvos.vendored_library = vendor_path.call "appletvos"
-    spec.watchos.vendored_library = vendor_path.call "watchos"
+    spec.ios.vendored_library = vendor_path.call("iphoneos")
+    spec.tvos.vendored_library = vendor_path.call("appletvos")
+    spec.watchos.vendored_library = vendor_path.call("watchos")
 
     # spec.dependency 'StitchCoreSDK', '~> 4.0.0-beta-1'
 end
