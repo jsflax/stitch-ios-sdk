@@ -78,8 +78,10 @@ Pod::Spec.new do |spec|
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
-  spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
-  spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
-  spec.watchos.vendored_libraries = self.vendor_path 'watchos'
+  array = self.vendor_path 'iphoneos'
+  puts array
+  # spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
+  # spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
+  # spec.watchos.vendored_libraries = self.vendor_path 'watchos'
   spec.source_files = 'vendor/Sources/MongoSwift/**/*.swift'
 end
