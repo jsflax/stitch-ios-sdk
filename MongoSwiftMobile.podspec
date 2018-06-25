@@ -78,6 +78,7 @@ Pod::Spec.new do |spec|
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
+  vendor_path.call('iphoneos')
   # array = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select {
   #   |f| [
   #     'libbson-1.0.dylib',
