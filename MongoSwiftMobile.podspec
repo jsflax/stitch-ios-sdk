@@ -72,11 +72,11 @@ Pod::Spec.new do |spec|
     "ENABLE_BITCODE" => "NO"
   }
   
-  vendor_path = lambda do |platform|
-    Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select { |f|
-      f if f =~ /lib(mongoc|bson)-1.0.dylib/
-    }
-  end
+  # vendor_path = lambda do |platform|
+  #   Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select { |f|
+  #     f if f =~ /lib(mongoc|bson)-1.0.dylib/
+  #   }
+  # end
 
   # puts Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
   #   f if f =~ /lib(mongoc|bson)-1.0.dylib/
