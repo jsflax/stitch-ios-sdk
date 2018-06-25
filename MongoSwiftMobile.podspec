@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
-  array = self.vendor_path 'iphoneos'
+  array = self.class.vendor_path 'iphoneos'
   puts array
   # spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
   # spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
