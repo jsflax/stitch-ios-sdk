@@ -70,12 +70,9 @@ Pod::Spec.new do |spec|
   }
   
   vendor_path = lambda do |platform|
-    Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
-      |f| [
-        'libbson-1.0.dylib',
-        'libmongoc-1.0.dylib'
-      ].any? { |lib| f.include?(lib) }
-    }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
+    return Dir["vendor/MobileSDKs/#{platform}/lib/"].select { |f|
+      return f if f.match('libbson-1.0.dylib|libmongoc-1.0.dylib')
+    }
   end
 
   vendor_path.call('iphoneos')
