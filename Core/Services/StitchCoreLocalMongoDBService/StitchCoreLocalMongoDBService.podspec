@@ -41,22 +41,28 @@ Pod::Spec.new do |spec|
   
     spec.source_files = "dist/#{spec.name}/**/*.swift"
 
-    def self.vendor_path(platform)
-      Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
-        |f| ![
-          "libbson-1.0.0.0.0.dylib", 
-          "libbson-1.0.dylib", 
-          "libmongoc-1.0.0.dylib", 
-          "libbson-1.0.0.dylib", 
-          "libmongoc-1.0.0.0.0.dylib", 
-          "libmongoc-1.0.dylib"
-        ].any? { |lib| f.include?(lib) }
-      }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
+    vendor_path = lambda do |platform|
+      Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select { |f|
+        f if f =~ /!lib(mongoc|bson)-1.0.dylib/
+      }
     end
-    
-    spec.ios.vendored_library = self.vendor_path "iphoneos"
-    spec.tvos.vendored_library = self.vendor_path "appletvos"
-    spec.watchos.vendored_library = self.vendor_path "watchos"
 
-    spec.dependency 'StitchCoreSDK', '~> 4.0.0-beta-3'
+    # def self.vendor_path(platform)
+    #   Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
+    #     |f| ![
+    #       "libbson-1.0.0.0.0.dylib", 
+    #       "libbson-1.0.dylib", 
+    #       "libmongoc-1.0.0.dylib", 
+    #       "libbson-1.0.0.dylib", 
+    #       "libmongoc-1.0.0.0.0.dylib", 
+    #       "libmongoc-1.0.dylib"
+    #     ].any? { |lib| f.include?(lib) }
+    #   }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
+    # end
+    
+    spec.ios.vendored_library = vendor_path.call "iphoneos"
+    spec.tvos.vendored_library = vendor_path.call "appletvos"
+    spec.watchos.vendored_library = vendor_path.call "watchos"
+
+    # spec.dependency 'StitchCoreSDK', '~> 4.0.0-beta-1'
 end

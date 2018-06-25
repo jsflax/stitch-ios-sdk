@@ -70,21 +70,13 @@ Pod::Spec.new do |spec|
   }
   
   vendor_path = lambda do |platform|
-    return Dir["vendor/MobileSDKs/#{platform}/lib/"].select { |f|
-      return f if f.match('libbson-1.0.dylib|libmongoc-1.0.dylib')
+    Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select { |f|
+      f if f =~ /lib(mongoc|bson)-1.0.dylib/
     }
   end
 
-  vendor_path.call('iphoneos')
-  # array = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select {
-  #   |f| [
-  #     'libbson-1.0.dylib',
-  #     'libmongoc-1.0.dylib'
-  #   ].any? { |lib| f.include?(lib) }
-  # }.map { |lib| "vendor/MobileSDKs/iphoneos/lib/#{lib}" }
-  # puts array
-  # spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
-  # spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
-  # spec.watchos.vendored_libraries = self.vendor_path 'watchos'
+  spec.ios.vendored_libraries = vendor_path.call('iphoneos')
+  spec.tvos.vendored_libraries = vendor_path.call('appletvos')
+  spec.watchos.vendored_libraries = vendor_path.call('watchos')
   spec.source_files = 'vendor/Sources/MongoSwift/**/*.swift'
 end
