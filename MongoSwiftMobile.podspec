@@ -69,17 +69,17 @@ Pod::Spec.new do |spec|
     "ENABLE_BITCODE" => "NO"
   }
   
-  def self.vendor_path(platform)
+  def vendor_path(platform)
     Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
       |f| [
-        "libbson-1.0.dylib",
-        "libmongoc-1.0.dylib"
+        'libbson-1.0.dylib'
+        'libmongoc-1.0.dylib'
       ].any? { |lib| f.include?(lib) }
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
-  spec.ios.vendored_library = self.vendor_path 'iphoneos'
-  spec.tvos.vendored_library = self.vendor_path 'appletvos'
-  spec.watchos.vendored_library = self.vendor_path 'watchos'
+  spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
+  spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
+  spec.watchos.vendored_libraries = self.vendor_path 'watchos'
   spec.source_files = 'vendor/Sources/MongoSwift/**/*.swift'
 end
