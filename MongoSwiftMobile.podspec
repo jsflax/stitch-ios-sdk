@@ -75,7 +75,7 @@ Pod::Spec.new do |spec|
     }
   end
 
-  spec.ios.vendored_libraries = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
+  puts Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
     f if f =~ /lib(mongoc|bson)-1.0.dylib/
   }
   # spec.tvos.vendored_libraries = vendor_path.call('appletvos')
