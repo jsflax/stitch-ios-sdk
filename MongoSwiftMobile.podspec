@@ -1,3 +1,6 @@
+test = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
+  f if f =~ /lib(mongoc|bson)-1.0.dylib/
+}
 Pod::Spec.new do |spec|
   spec.name = 'MongoSwiftMobile'
   spec.version = '4.0.0-beta-3'
@@ -75,9 +78,9 @@ Pod::Spec.new do |spec|
     }
   end
 
-  puts Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
-    f if f =~ /lib(mongoc|bson)-1.0.dylib/
-  }
+  # puts Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
+  #   f if f =~ /lib(mongoc|bson)-1.0.dylib/
+  # }
   # spec.tvos.vendored_libraries = vendor_path.call('appletvos')
   # spec.watchos.vendored_libraries = vendor_path.call('watchos')
   spec.source_files = 'vendor/Sources/MongoSwift/**/*.swift'
