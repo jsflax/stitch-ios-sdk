@@ -78,13 +78,13 @@ Pod::Spec.new do |spec|
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
-  array = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select {
-    |f| [
-      'libbson-1.0.dylib',
-      'libmongoc-1.0.dylib'
-    ].any? { |lib| f.include?(lib) }
-  }.map { |lib| "vendor/MobileSDKs/iphoneos/lib/#{lib}" }
-  puts array
+  # array = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select {
+  #   |f| [
+  #     'libbson-1.0.dylib',
+  #     'libmongoc-1.0.dylib'
+  #   ].any? { |lib| f.include?(lib) }
+  # }.map { |lib| "vendor/MobileSDKs/iphoneos/lib/#{lib}" }
+  # puts array
   # spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
   # spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
   # spec.watchos.vendored_libraries = self.vendor_path 'watchos'
