@@ -69,7 +69,7 @@ Pod::Spec.new do |spec|
     "ENABLE_BITCODE" => "NO"
   }
   
-  def self.vendor_path(platform)
+  vendor_path = lambda do |platform|
     Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
       |f| [
         'libbson-1.0.dylib',
@@ -78,7 +78,7 @@ Pod::Spec.new do |spec|
     }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
   end
 
-  array = self.class.vendor_path 'iphoneos'
+  array = vendor_path.call('iphoneos')
   puts array
   # spec.ios.vendored_libraries = self.vendor_path 'iphoneos'
   # spec.tvos.vendored_libraries = self.vendor_path 'appletvos'
