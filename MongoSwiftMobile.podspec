@@ -1,12 +1,3 @@
-def vendor_path(platform)
-  Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
-    |f| [
-      "libbson-1.0.dylib",
-      "libmongoc-1.0.dylib"
-    ].any? { |lib| f.include?(lib) }
-  }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
-end
-
 Pod::Spec.new do |spec|
   spec.name = 'MongoSwiftMobile'
   spec.version = '4.0.0-beta-3'
@@ -77,6 +68,15 @@ Pod::Spec.new do |spec|
 
     "ENABLE_BITCODE" => "NO"
   }
+  
+  def vendor_path(platform)
+    Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
+      |f| [
+        "libbson-1.0.dylib",
+        "libmongoc-1.0.dylib"
+      ].any? { |lib| f.include?(lib) }
+    }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
+  end
   
   spec.ios.vendored_library = vendor_path 'iphoneos'
   spec.tvos.vendored_library = vendor_path 'appletvos'
