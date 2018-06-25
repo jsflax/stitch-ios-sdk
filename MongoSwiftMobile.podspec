@@ -51,31 +51,31 @@ Pod::Spec.new do |spec|
 
     "ENABLE_BITCODE" => "NO"
   }
-  # spec.user_target_xcconfig = {
-  #   "OTHER_LDFLAGS[sdk=iphoneos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
-  #   "OTHER_LDFLAGS[sdk=iphonesimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
-  #   "OTHER_LDFLAGS[sdk=appletvos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
-  #   "OTHER_LDFLAGS[sdk=appletvsimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
-  #   "OTHER_LDFLAGS[sdk=watchos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
-  #   "OTHER_LDFLAGS[sdk=watchsimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
+  spec.user_target_xcconfig = {
+    "OTHER_LDFLAGS[sdk=iphoneos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
+    "OTHER_LDFLAGS[sdk=iphonesimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
+    "OTHER_LDFLAGS[sdk=appletvos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
+    "OTHER_LDFLAGS[sdk=appletvsimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
+    "OTHER_LDFLAGS[sdk=watchos*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
+    "OTHER_LDFLAGS[sdk=watchsimulator*]" => "-rpath $(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
 
-  #   "LIBRARY_SEARCH_PATHS[sdk=iphoneos*]"        => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
-  #   "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
-  #   "LIBRARY_SEARCH_PATHS[sdk=appletvos*]"       => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
-  #   "LIBRARY_SEARCH_PATHS[sdk=appletvsimulator*]"=> "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
-  #   "LIBRARY_SEARCH_PATHS[sdk=watchos*]"         => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
-  #   "LIBRARY_SEARCH_PATHS[sdk=watchsimulator*]"=> "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=iphoneos*]"        => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/iphoneos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=appletvos*]"       => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=appletvsimulator*]"=> "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/appletvos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=watchos*]"         => "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
+    "LIBRARY_SEARCH_PATHS[sdk=watchsimulator*]"=> "$(PODS_ROOT)/#{spec.name}/vendor/MobileSDKs/watchos/lib",
 
-  #   "ENABLE_BITCODE" => "NO"
-  # }
-  # def self.vendor_path(platform)
-  #   Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
-  #     |f| [
-  #       "libbson-1.0.dylib",
-  #       "libmongoc-1.0.dylib"
-  #     ].any? { |lib| f.include?(lib) }
-  #   }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
-  # end
+    "ENABLE_BITCODE" => "NO"
+  }
+  def self.vendor_path(platform)
+    Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select {
+      |f| [
+        "libbson-1.0.dylib",
+        "libmongoc-1.0.dylib"
+      ].any? { |lib| f.include?(lib) }
+    }.map { |lib| "vendor/MobileSDKs/#{platform}/lib/#{lib}" }
+  end
   # spec.ios.vendored_library = self.vendor_path 'iphoneos'
   # spec.tvos.vendored_library = self.vendor_path 'appletvos'
   # spec.watchos.vendored_library = self.vendor_path 'watchos'
