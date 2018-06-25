@@ -1,4 +1,4 @@
-test = Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
+Dir.entries("vendor/MobileSDKs/iphoneos/lib/").select { |f|
   f if f =~ /lib(mongoc|bson)-1.0.dylib/
 }
 Pod::Spec.new do |spec|
