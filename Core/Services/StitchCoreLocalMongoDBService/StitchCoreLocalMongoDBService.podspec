@@ -43,7 +43,7 @@ Pod::Spec.new do |spec|
 
     vendor_path = lambda do |platform|
       Dir.entries("vendor/MobileSDKs/#{platform}/lib/").select { |f|
-        f if f =~ /!lib(mongoc|bson)-1.0.dylib/
+        f if f =~ /lib(mongoc|bson)-1.0.dylib/
       }
     end
 
