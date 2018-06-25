@@ -75,8 +75,8 @@ Pod::Spec.new do |spec|
     }
   end
 
-  spec.ios.vendored_libraries = vendor_path.call('iphoneos')
-  spec.tvos.vendored_libraries = vendor_path.call('appletvos')
-  spec.watchos.vendored_libraries = vendor_path.call('watchos')
+  # spec.ios.vendored_libraries = vendor_path.call('iphoneos')
+  # spec.tvos.vendored_libraries = vendor_path.call('appletvos')
+  # spec.watchos.vendored_libraries = vendor_path.call('watchos')
   spec.source_files = 'vendor/Sources/MongoSwift/**/*.swift'
 end
