@@ -1,0 +1,18 @@
+
+    FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]=/Users/jasonflax/Development/stitch-ios-sdk/Frameworks/ios
+    OTHER_LD_FLAGS[sdk=iphoneos*]=-rpath /Users/jasonflax/Development/stitch-ios-sdk/Frameworks/ios
+
+    FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]=/Users/jasonflax/Development/stitch-ios-sdk/Frameworks/ios
+    OTHER_LD_FLAGS[sdk=iphonesimulator*]=-rpath /Users/jasonflax/Development/stitch-ios-sdk/Frameworks/ios
+
+    FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]=/Users/jasonflax/Development/stitch-ios-sdk/Frameworks/tvos
+    OTHER_LD_FLAGS[sdk=appletvos*]=-rpath /Users/jasonflax/Development/stitch-ios-sdk/Frameworks/tvos
+
+    FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]=/Users/jasonflax/Development/stitch-ios-sdk/Frameworks/tvos
+    OTHER_LD_FLAGS[sdk=appletvsimulator*]=-rpath /Users/jasonflax/Development/stitch-ios-sdk/Frameworks/tvos
+
+    FRAMEWORK_SEARCH_PATHS[sdk=macosx*]=/Users/jasonflax/Development/stitch-ios-sdk/Frameworks/macos
+    OTHER_LD_FLAGS[sdk=macosx*]=-rpath /Users/jasonflax/Development/stitch-ios-sdk/Frameworks/macos
+ENABLE_BITCODE=NO
+IPHONEOS_DEPLOYMENT_TARGET=10.2
+VALID_ARCHS=i386 x86_64 arm64 armv7k armv7 armv7s
