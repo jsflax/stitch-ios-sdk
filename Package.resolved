@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CommonCrypto",
+        "repositoryURL": "https://github.com/kylef-archive/CommonCrypto.git",
+        "state": {
+          "branch": null,
+          "revision": "8080a04cab22f73276c81c92a6af2c39e15be094",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "JWT",
+        "repositoryURL": "https://github.com/kylef/JSONWebToken.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "e5745f95a3e60d9ccee4900764ec79b4239c4ef9",
+          "version": "2.2.0"
+        }
+      },
+      {
+        "package": "MockUtils",
+        "repositoryURL": "/Users/jasonflax/Development/stitch-ios-sdk/MockUtils",
+        "state": {
+          "branch": "master",
+          "revision": "c43745fa4cd9ed8ee8eccba013c229fd39c5a354",
+          "version": null
+        }
+      },
+      {
+        "package": "Swifter",
+        "repositoryURL": "https://github.com/httpswift/swifter.git",
+        "state": {
+          "branch": null,
+          "revision": "6fccec52374d5799e303c3c7b808ce48ceaf5c94",
+          "version": "1.4.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
