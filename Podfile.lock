@@ -1,0 +1,32 @@
+PODS:
+  - Base64 (1.1.2)
+  - JWT (3.0.0-beta.11):
+    - Base64 (~> 1.1.2)
+  - mongo-embedded-c-driver (1.13.0-dev2)
+  - MongoSwift (0.0.4):
+    - mongo-embedded-c-driver (~> 1.13.0-dev2)
+  - Swifter (1.4.5)
+
+DEPENDENCIES:
+  - JWT (= 3.0.0-beta.11)
+  - MongoSwift (= 0.0.4)
+  - Swifter (~> 1.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Base64
+    - JWT
+    - mongo-embedded-c-driver
+    - MongoSwift
+    - Swifter
+
+SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
+  JWT: 05028b9624591bba9681bb57df2c5f95fa258bad
+  mongo-embedded-c-driver: a3dcefe9d18da94d579ee81d9c2bf9bc9caac6d3
+  MongoSwift: 67381c1a4962d2a75b57fb816fd4067721561418
+  Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
+
+PODFILE CHECKSUM: 46943fd054d05afd3ddb1832e3f5e7ae3f5c7634
+
+COCOAPODS: 1.6.0.beta.1
